@@ -1,5 +1,6 @@
 # Ontology-template
-Template for ontologies. Structured in view of continuous integration workflows.
+
+Template for ontologies. Structured in view of using shared **continuous integration** and **documentation** workflows.
 
 Replace this file with a proper readme.md describing your project.
 
