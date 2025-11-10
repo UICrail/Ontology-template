@@ -3,7 +3,7 @@
 name: Docs (WIDOCO)
 on:
   workflow_run:
-    workflows: ["Ontology QA"]
+    workflows: ["Ontology verification"]
     types: [completed]
 
 permissions:
