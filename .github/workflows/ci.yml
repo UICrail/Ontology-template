@@ -1,6 +1,6 @@
 # Continuous integration workflow
 
-name: Ontology QA
+name: Ontology verification
 
 on:
   push:
