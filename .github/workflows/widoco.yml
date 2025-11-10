@@ -19,4 +19,4 @@ jobs:
       main_ontology: ontology/src/core.ttl
 
 
-# Note: gets triggered by "Ontology QA".
+# Note: gets triggered by "Ontology verification".
