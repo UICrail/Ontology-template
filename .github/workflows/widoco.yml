@@ -3,6 +3,15 @@
 name: Docs (WIDOCO)
 on:
   workflow_dispatch:
+    inputs:
+      main_ontology:
+        description: "Optional override for ontology entrypoint (else uses ontology/src/config.md)"
+        required: false
+        type: string
+      reasoner:
+        description: "Optional override for reasoner (else uses ontology/src/config.md)"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -12,4 +21,8 @@ permissions:
 jobs:
   widoco:
     uses: Airy59/OntoQA/.github/workflows/docs-widoco.yml@main
-    # main_ontology + reasoner are resolved from ontology/src/config.md (YAML front matter)
+    with:
+      # If empty, OntoQA workflow falls back to ontology/src/config.md
+      main_ontology: ${{ inputs.main_ontology }}
+      reasoner: ${{ inputs.reasoner }}
+    # main_ontology + reasoner can also be resolved from ontology/src/config.md (YAML front matter)
